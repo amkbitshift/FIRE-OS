@@ -5,7 +5,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/amkbitshift/FIRE-OS?style=flat-square)
 ![GitHub repo size](https://img.shields.io/github/repo-size/amkbitshift/FIRE-OS?style=flat-square)
 
-**URL:** `[https://github.com/amkbitshift/FIRE-OS.git](https://amkbitshift.github.io/FIRE-OS/)`
+**URL:** `https://amkbitshift.github.io/FIRE-OS/`
 
 A modern, responsive Field Service Management (FSM) application built with React and Tailwind CSS, designed specifically for Fire Safety and Inspection services.
 
