@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire OS Clients</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --fire-primary: #F97316;
+            --fire-primary-dark: #EA580C;
+            --fire-secondary: #DC2626;
+            --fire-accent: #FB923C;
+            --fire-bg: #FAFAF9;
+        }
+        .icon { width: 1.25rem; height: 1.25rem; }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex w-full" style="background-color: var(--fire-bg);">
+
+        <aside class="hidden md:flex flex-col w-64 border-r border-gray-200 bg-gradient-to-b from-white to-gray-50 flex-shrink-0">
+            <header class="border-b border-gray-200 p-6"></header>
+            
+            <div class="p-3 flex-1 overflow-y-auto">
+                <div class="space-y-1">
+                    <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider px-3 py-2">Navigation</h3>
+                    
+                    <a href="index.html" class="flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all duration-200 hover:bg-orange-50 text-gray-700 hover:text-orange-600">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        <span class="font-medium">Dashboard</span>
+                    </a>
+                    
+                    <a href="schedule.html" class="flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all duration-200 hover:bg-orange-50 text-gray-700 hover:text-orange-600">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <span class="font-medium">Schedule</span>
+                    </a>
+                    
+                    <a href="clients.html" class="flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all duration-200 bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-md">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h-4v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2H1M21 20h-4v-2a4 4 0 00-4-4h-4a4 4 0 00-4 4v2h2M12 4a4 4 0 100 8 4 4 0 000-8zM7 13a4 4 0 100-8 4 4 0 000 8zM17 13a4 4 0 100-8 4 4 0 000 8z"></path></svg>
+                        <span class="font-medium">Clients</span>
+                    </a>
+                    
+                    <a href="invoices.html" class="flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all duration-200 hover:bg-orange-50 text-gray-700 hover:text-orange-600">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <span class="font-medium">Invoices</span>
+                    </a>
+                    
+                    <a href="reports.html" class="flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all duration-200 hover:bg-orange-50 text-gray-700 hover:text-orange-600">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l-2 2M15 19V6l2 2m-8 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <span class="font-medium">Reports</span>
+                    </a>
+                </div>
+            </div>
+
+            <footer class="border-t border-gray-200 p-4"></footer>
+        </aside>
+        <main class="flex-1 flex flex-col overflow-hidden">
+            <header class="bg-white border-b border-gray-200 px-6 py-4 md:hidden shadow-sm"></header>
+
+            <div class="flex-1 overflow-auto">
+                <div class="p-4 md:p-8 min-h-screen">
+                    <div class="max-w-7xl mx-auto">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+                            <div>
+                                <h1 class="text-3xl font-bold text-gray-900">Clients</h1>
+                                <p class="text-gray-600 mt-1">Manage your fire service clients</p>
+                            </div>
+                            <button class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 shadow-lg text-white font-medium py-2 px-4 rounded-md flex items-center">
+                                <svg class="icon w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                Add Client
+                            </button>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            
+                            <div class="shadow-lg hover:shadow-xl transition-shadow h-full border-2 hover:border-blue-200 rounded-lg overflow-hidden bg-white">
+                                <header class="bg-gradient-to-br from-blue-50 to-indigo-50 border-b p-5">
+                                    <div class="flex items-start gap-3">
+                                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center shadow-md flex-shrink-0">
+                                            <svg class="icon w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21v-2a4 4 0 00-4-4H9a4 4 0 00-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <h3 class="font-bold text-lg text-gray-900 truncate">ABC Corporation</h3>
+                                            <p class="text-sm text-gray-600 truncate">Jane Doe</p>
+                                        </div>
+                                    </div>
+                                </header>
+                                <div class="p-5 space-y-3">
+                                    <div class="flex items-center gap-3 text-sm">
+                                        <svg class="icon w-4 h-4 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.842 5.228A2 2 0 0012 14.072h0a2 2 0 001.158-.456L21 8m-6 5h-6"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 17V7a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2z"></path></svg>
+                                        <span class="text-gray-700 truncate">contact@abc.com</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 text-sm">
+                                        <svg class="icon w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11H8m0 4h8m-8-8h8"></path></svg>
+                                        <span class="text-gray-700">(555) 123-4567</span>
+                                    </div>
+                                    <div class="flex items-start gap-3 text-sm">
+                                        <svg class="icon w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                        <span class="text-gray-700 flex-1">
+                                            123 Main Street, New York, NY 10001
+                                        </span>
+                                    </div>
+                                    <div class="pt-3 border-t">
+                                        <p class="text-xs text-gray-600 line-clamp-2">Prefers early morning service calls. Key contact is available via text.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="shadow-lg hover:shadow-xl transition-shadow h-full border-2 hover:border-blue-200 rounded-lg overflow-hidden bg-white">
+                                </div>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </main>
+    </div>
+</body>
+</html>

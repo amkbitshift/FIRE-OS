@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire OS Dashboard (Static)</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        :root {
+            --fire-primary: #F97316;
+            --fire-primary-dark: #EA580C;
+            --fire-secondary: #DC2626;
+            --fire-accent: #FB923C;
+            --fire-bg: #FAFAF9;
+        }
+        /* Required for the lucide-react icons in the original code */
+        /* Since we can't use React components, we use SVG placeholders */
+        .icon { width: 1.25rem; height: 1.25rem; }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex w-full" style="background-color: var(--fire-bg);">
+
+        <aside class="hidden md:flex flex-col w-64 border-r border-gray-200 bg-gradient-to-b from-white to-gray-50 flex-shrink-0">
+            <header class="border-b border-gray-200 p-6">
+                <div class="flex items-center gap-3">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl blur opacity-50"></div>
+                        <div class="relative w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center shadow-lg">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7.5 5 12 5s4.657 2.343 5.657 3.343M17.657 18.657L22 23M6.343 7.343L2 2"></path></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-xl text-gray-900">Fire OS</h2>
+                        <p class="text-xs text-gray-500 font-medium">Field Service Management</p>
+                    </div>
+                </div>
+            </header>
+            
+<div class="p-3 flex-1 overflow-y-auto">
+    <div class="space-y-1">
+        <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider px-3 py-2">Navigation</h3>
+        
+        <a href="index.html" class="flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all duration-200 bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-md">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            <span class="font-medium">Dashboard</span>
+        </a>
+        
+        <a href="schedule.html" class="flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all duration-200 hover:bg-orange-50 text-gray-700 hover:text-orange-600">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            <span class="font-medium">Schedule</span>
+        </a>
+        
+        <a href="clients.html" class="flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all duration-200 hover:bg-orange-50 text-gray-700 hover:text-orange-600">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h-4v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2H1M21 20h-4v-2a4 4 0 00-4-4h-4a4 4 0 00-4 4v2h2M12 4a4 4 0 100 8 4 4 0 000-8zM7 13a4 4 0 100-8 4 4 0 000 8zM17 13a4 4 0 100-8 4 4 0 000 8z"></path></svg>
+            <span class="font-medium">Clients</span>
+        </a>
+        
+        <a href="invoices.html" class="flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all duration-200 hover:bg-orange-50 text-gray-700 hover:text-orange-600">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            <span class="font-medium">Invoices</span>
+        </a>
+        
+        <a href="reports.html" class="flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all duration-200 hover:bg-orange-50 text-gray-700 hover:text-orange-600">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l-2 2M15 19V6l2 2m-8 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            <span class="font-medium">Reports</span>
+        </a>
+    </div>
+</div>
+
+            <footer class="border-t border-gray-200 p-4">
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3 px-2">
+                        <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center shadow">
+                            <span class="text-white font-bold text-sm">A</span>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-semibold text-gray-900 text-sm truncate">Admin User</p>
+                            <p class="text-xs text-gray-500 truncate">admin@fireos.com</p>
+                        </div>
+                    </div>
+                    <button class="w-full justify-start text-gray-600 hover:text-red-600 hover:border-red-200 border border-gray-200 px-4 py-2 rounded-md transition-colors duration-200 flex items-center">
+                        <svg class="icon w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+                        Logout
+                    </button>
+                </div>
+            </footer>
+        </aside>
+        <main class="flex-1 flex flex-col overflow-hidden">
+            <header class="bg-white border-b border-gray-200 px-6 py-4 md:hidden shadow-sm">
+                <div class="flex items-center gap-4">
+                    <button class="hover:bg-orange-50 p-2 rounded-lg transition-colors duration-200">
+                        <svg class="icon w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                    <div class="flex items-center gap-2">
+                        <svg class="icon w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7.5 5 12 5s4.657 2.343 5.657 3.343M17.657 18.657L22 23M6.343 7.343L2 2"></path></svg>
+                        <h1 class="text-xl font-bold text-gray-900">Fire OS</h1>
+                    </div>
+                </div>
+            </header>
+
+            <div class="flex-1 overflow-auto">
+                <div class="p-4 md:p-8 min-h-screen">
+                    <div class="max-w-7xl mx-auto space-y-8">
+                        
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                            <div>
+                                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Dashboard</h1>
+                                <p class="text-gray-600">Welcome back! Here's your service overview.</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <button class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 shadow-lg shadow-orange-200 text-white font-medium py-2 px-4 rounded-md flex items-center">
+                                    <svg class="icon w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                    New Job
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="relative overflow-hidden border-2 border-orange-200 bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-lg shadow-md">
+                                <div class="absolute top-0 right-0 w-32 h-32 transform translate-x-10 -translate-y-10 bg-orange-400 rounded-full opacity-10"></div>
+                                <header class="pb-3">
+                                    <div class="flex items-center justify-between">
+                                        <h3 class="text-sm font-medium text-gray-600">Total Jobs</h3>
+                                        <svg class="icon w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    </div>
+                                </header>
+                                <div>
+                                    <div class="text-3xl font-bold text-gray-900">76</div> <div class="flex gap-3 mt-3 text-xs">
+                                        <span class="text-gray-500">12 pending</span>
+                                        <span class="text-blue-600">5 active</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="relative overflow-hidden p-6 rounded-lg shadow-md border border-gray-200">
+                                <header class="pb-3">
+                                    <div class="flex items-center justify-between">
+                                        <h3 class="text-sm font-medium text-gray-600">Clients</h3>
+                                        <svg class="icon w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h-4v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2H1M21 20h-4v-2a4 4 0 00-4-4h-4a4 4 0 00-4 4v2h2M12 4a4 4 0 100 8 4 4 0 000-8zM7 13a4 4 0 100-8 4 4 0 000 8zM17 13a4 4 0 100-8 4 4 0 000 8z"></path></svg>
+                                    </div>
+                                </header>
+                                <div>
+                                    <div class="text-3xl font-bold text-gray-900">45</div> <p class="text-xs text-gray-500 mt-2">Active clients</p>
+                                </div>
+                            </div>
+                            
+                            <div class="relative overflow-hidden p-6 rounded-lg shadow-md border border-gray-200">
+                                <header class="pb-3">
+                                    <div class="flex items-center justify-between">
+                                        <h3 class="text-sm font-medium text-gray-600">Invoices</h3>
+                                        <svg class="icon w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    </div>
+                                </header>
+                                <div>
+                                    <div class="text-3xl font-bold text-gray-900">231</div> <p class="text-xs text-gray-500 mt-2">Generated invoices</p>
+                                </div>
+                            </div>
+
+                            <div class="relative overflow-hidden p-6 rounded-lg shadow-md border border-gray-200">
+                                <header class="pb-3">
+                                    <div class="flex items-center justify-between">
+                                        <h3 class="text-sm font-medium text-gray-600">Reports</h3>
+                                        <svg class="icon w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l-2 2M15 19V6l2 2m-8 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    </div>
+                                </header>
+                                <div>
+                                    <div class="text-3xl font-bold text-gray-900">98</div> <p class="text-xs text-gray-500 mt-2">AI-generated reports</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid lg:grid-cols-3 gap-6">
+                            <div class="lg:col-span-2 shadow-lg rounded-lg border border-gray-200 overflow-hidden bg-white">
+                                <header class="border-b bg-gradient-to-r from-orange-50 to-red-50 p-6">
+                                    <div class="flex items-center justify-between">
+                                        <h2 class="text-xl font-bold flex items-center gap-2 text-gray-900">
+                                            <svg class="icon w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            Upcoming Jobs
+                                        </h2>
+                                        <button class="text-orange-600 hover:text-orange-700 font-medium text-sm p-2 rounded-md hover:bg-gray-100 flex items-center">
+                                            View All 
+                                            <svg class="icon w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                        </button>
+                                    </div>
+                                </header>
+                                <div class="p-6 space-y-3">
+                                    <div class="p-4 rounded-lg border border-gray-200 hover:border-orange-200 hover:shadow-md transition-all bg-white">
+                                        <div class="flex items-start justify-between gap-4">
+                                            <div class="flex-1 min-w-0">
+                                                <div class="flex items-center gap-2 mb-2">
+                                                    <h3 class="font-semibold text-gray-900 truncate">Quarterly Fire Pump Test</h3>
+                                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700">Urgent</span>
+                                                </div>
+                                                <div class="flex flex-wrap gap-3 text-sm text-gray-600">
+                                                    <span class="flex items-center gap-1">
+                                                        <svg class="icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                                        Dec 15, 2025
+                                                    </span>
+                                                    <span class="truncate">Building D, Pump Room</span>
+                                                </div>
+                                            </div>
+                                            <span class="inline-flex items-center px-3 py-1 text-xs font-medium border rounded-full bg-blue-100 text-blue-700 border-blue-200">in progress</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-4 rounded-lg border border-gray-200 hover:border-orange-200 hover:shadow-md transition-all bg-white">
+                                        <div class="flex items-start justify-between gap-4">
+                                            <div class="flex-1 min-w-0">
+                                                <div class="flex items-center gap-2 mb-2">
+                                                    <h3 class="font-semibold text-gray-900 truncate">Annual Fire Alarm Inspection</h3>
+                                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-700">Medium</span>
+                                                </div>
+                                                <div class="flex flex-wrap gap-3 text-sm text-gray-600">
+                                                    <span class="flex items-center gap-1">
+                                                        <svg class="icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                                        Dec 20, 2025
+                                                    </span>
+                                                    <span class="truncate">HQ Main Office</span>
+                                                </div>
+                                            </div>
+                                            <span class="inline-flex items-center px-3 py-1 text-xs font-medium border rounded-full bg-gray-100 text-gray-700 border-gray-200">incomplete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-6">
+                                <div class="shadow-lg rounded-lg border-2 border-orange-100 overflow-hidden bg-white">
+                                    <header class="bg-gradient-to-br from-orange-500 to-red-600 text-white p-4">
+                                        <h3 class="text-lg font-bold">Quick Actions</h3>
+                                    </header>
+                                    <div class="p-4 space-y-2">
+                                        <a href="#" class="block">
+                                            <button class="w-full justify-start hover:bg-orange-50 hover:border-orange-200 border border-gray-200 text-gray-700 font-medium py-2 px-4 rounded-md flex items-center transition-colors duration-200">
+                                                <svg class="icon w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                                Schedule Job
+                                            </button>
+                                        </a>
+                                        <a href="#" class="block">
+                                            <button class="w-full justify-start hover:bg-blue-50 hover:border-blue-200 border border-gray-200 text-gray-700 font-medium py-2 px-4 rounded-md flex items-center transition-colors duration-200">
+                                                <svg class="icon w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h-4v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2H1M21 20h-4v-2a4 4 0 00-4-4h-4a4 4 0 00-4 4v2h2M12 4a4 4 0 100 8 4 4 0 000-8zM7 13a4 4 0 100-8 4 4 0 000 8zM17 13a4 4 0 100-8 4 4 0 000 8z"></path></svg>
+                                                Add Client
+                                            </button>
+                                        </a>
+                                        <a href="#" class="block">
+                                            <button class="w-full justify-start hover:bg-purple-50 hover:border-purple-200 border border-gray-200 text-gray-700 font-medium py-2 px-4 rounded-md flex items-center transition-colors duration-200">
+                                                <svg class="icon w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l-2 2M15 19V6l2 2m-8 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                                Generate Report
+                                            </button>
+                                        </a>
+                                        <a href="#" class="block">
+                                            <button class="w-full justify-start hover:bg-green-50 hover:border-green-200 border border-gray-200 text-gray-700 font-medium py-2 px-4 rounded-md flex items-center transition-colors duration-200">
+                                                <svg class="icon w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-3.1 0-5 3-5 3v5H5V8s1.9-3 5-3h4c3.1 0 5 3 5 3v8h-2V11s-1.9-3-5-3h-4zM7 16h10v6H7v-6z"></path></svg>
+                                                Create Invoice
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="shadow-lg rounded-lg border border-gray-200 overflow-hidden bg-white">
+                                    <header class="border-b p-4">
+                                        <h2 class="text-lg font-bold flex items-center gap-2 text-gray-900">
+                                            <svg class="icon w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l-2 2M15 19V6l2 2m-8 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                            Recent Reports
+                                        </h2>
+                                    </header>
+                                    <div class="p-4">
+                                        <div class="space-y-3">
+                                            <div class="p-3 rounded-lg border border-gray-200 hover:border-purple-200 hover:shadow-sm transition-all">
+                                                <p class="font-medium text-sm text-gray-900 truncate">ABC Corporation - Q4 Inspection</p>
+                                                <p class="text-xs text-gray-500 mt-1">Oct 28, 2025</p>
+                                            </div>
+                                            <div class="p-3 rounded-lg border border-gray-200 hover:border-purple-200 hover:shadow-sm transition-all">
+                                                <p class="font-medium text-sm text-gray-900 truncate">Tech Solutions Building - Annual Test</p>
+                                                <p class="text-xs text-gray-500 mt-1">Oct 25, 2025</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </main>
+    </div>
+</body>
+</html>

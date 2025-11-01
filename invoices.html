@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire OS Invoices</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --fire-primary: #F97316;
+            --fire-primary-dark: #EA580C;
+            --fire-secondary: #DC2626;
+            --fire-accent: #FB923C;
+            --fire-bg: #FAFAF9;
+        }
+        .icon { width: 1.25rem; height: 1.25rem; }
+        /* Add basic table styles for better look */
+        .table { width: 100%; border-collapse: collapse; }
+        .table th, .table td { padding: 1rem; text-align: left; border-bottom: 1px solid #e5e7eb; }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex w-full" style="background-color: var(--fire-bg);">
+
+        <aside class="hidden md:flex flex-col w-64 border-r border-gray-200 bg-gradient-to-b from-white to-gray-50 flex-shrink-0">
+            <header class="border-b border-gray-200 p-6"></header>
+            
+            <div class="p-3 flex-1 overflow-y-auto">
+                <div class="space-y-1">
+                    <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider px-3 py-2">Navigation</h3>
+                    
+                    <a href="index.html" class="flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all duration-200 hover:bg-orange-50 text-gray-700 hover:text-orange-600">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        <span class="font-medium">Dashboard</span>
+                    </a>
+                    
+                    <a href="schedule.html" class="flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all duration-200 hover:bg-orange-50 text-gray-700 hover:text-orange-600">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <span class="font-medium">Schedule</span>
+                    </a>
+                    
+                    <a href="clients.html" class="flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all duration-200 hover:bg-orange-50 text-gray-700 hover:text-orange-600">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h-4v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2H1M21 20h-4v-2a4 4 0 00-4-4h-4a4 4 0 00-4 4v2h2M12 4a4 4 0 100 8 4 4 0 000-8zM7 13a4 4 0 100-8 4 4 0 000 8zM17 13a4 4 0 100-8 4 4 0 000 8z"></path></svg>
+                        <span class="font-medium">Clients</span>
+                    </a>
+                    
+                    <a href="invoices.html" class="flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all duration-200 bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-md">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <span class="font-medium">Invoices</span>
+                    </a>
+                    
+                    <a href="reports.html" class="flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all duration-200 hover:bg-orange-50 text-gray-700 hover:text-orange-600">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l-2 2M15 19V6l2 2m-8 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <span class="font-medium">Reports</span>
+                    </a>
+                </div>
+            </div>
+
+            <footer class="border-t border-gray-200 p-4"></footer>
+        </aside>
+        <main class="flex-1 flex flex-col overflow-hidden">
+            <header class="bg-white border-b border-gray-200 px-6 py-4 md:hidden shadow-sm"></header>
+
+            <div class="flex-1 overflow-auto">
+                <div class="p-4 md:p-8 min-h-screen">
+                    <div class="max-w-7xl mx-auto">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+                            <div>
+                                <h1 class="text-3xl font-bold text-gray-900">Invoices</h1>
+                                <p class="text-gray-600 mt-1">Track billing and payments</p>
+                            </div>
+                            <button class="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-lg text-white font-medium py-2 px-4 rounded-md flex items-center">
+                                <svg class="icon w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                Create Invoice
+                            </button>
+                        </div>
+
+                        <div class="shadow-lg rounded-lg border border-gray-200 overflow-hidden bg-white">
+                            <header class="bg-gradient-to-r from-green-50 to-emerald-50 border-b p-4">
+                                <h2 class="text-xl font-bold">All Invoices</h2>
+                            </header>
+                            <div class="p-0">
+                                <div class="overflow-x-auto">
+                                    <table class="table min-w-full divide-y divide-gray-200">
+                                        <thead class="bg-gray-50">
+                                            <tr>
+                                                <th class="text-xs font-medium text-gray-500 uppercase tracking-wider">Invoice #</th>
+                                                <th class="text-xs font-medium text-gray-500 uppercase tracking-wider">Client</th>
+                                                <th class="text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                                                <th class="text-xs font-medium text-gray-500 uppercase tracking-wider">Due Date</th>
+                                                <th class="text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
+                                                <th class="text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-gray-200">
+                                            <tr class="hover:bg-gray-50">
+                                                <td class="font-medium">INV-001</td>
+                                                <td><div class="flex items-center gap-2"><svg class="icon w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21v-2a4 4 0 00-4-4H9a4 4 0 00-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>ABC Corp</div></td>
+                                                <td><div class="flex items-center gap-2 text-sm"><svg class="icon w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>Jan 20, 2025</div></td>
+                                                <td>Feb 20, 2025</td>
+                                                <td class="font-semibold">$1,500.00</td>
+                                                <td><span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-700">paid</span></td>
+                                            </tr>
+                                            <tr class="hover:bg-gray-50">
+                                                <td class="font-medium">INV-002</td>
+                                                <td><div class="flex items-center gap-2"><svg class="icon w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21v-2a4 4 0 00-4-4H9a4 4 0 00-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Tech Solutions</div></td>
+                                                <td><div class="flex items-center gap-2 text-sm"><svg class="icon w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>Feb 10, 2025</div></td>
+                                                <td>Mar 10, 2025</td>
+                                                <td class="font-semibold">$450.50</td>
+                                                <td><span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700">overdue</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </main>
+    </div>
+</body>
+</html>

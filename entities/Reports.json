@@ -1,0 +1,57 @@
+{
+  "name": "Report",
+  "type": "object",
+  "properties": {
+    "job_id": {
+      "type": "string",
+      "description": "Related job ID"
+    },
+    "client_name": {
+      "type": "string"
+    },
+    "technician_name": {
+      "type": "string"
+    },
+    "inspection_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "equipment_type": {
+      "type": "string"
+    },
+    "equipment_location": {
+      "type": "string"
+    },
+    "findings": {
+      "type": "string",
+      "description": "Raw findings from inspection"
+    },
+    "actions_taken": {
+      "type": "string",
+      "description": "Actions performed during service"
+    },
+    "parts_used": {
+      "type": "string"
+    },
+    "test_results": {
+      "type": "string"
+    },
+    "generated_report": {
+      "type": "string",
+      "description": "AI-generated professional report"
+    },
+    "recommendations": {
+      "type": "string",
+      "description": "AI-generated recommendations"
+    },
+    "pros_cons": {
+      "type": "string",
+      "description": "AI-generated pros and cons analysis"
+    }
+  },
+  "required": [
+    "client_name",
+    "inspection_date",
+    "findings"
+  ]
+}

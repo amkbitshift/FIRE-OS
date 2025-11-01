@@ -1,0 +1,67 @@
+{
+  "name": "Job",
+  "type": "object",
+  "properties": {
+    "client_id": {
+      "type": "string",
+      "description": "Reference to client"
+    },
+    "title": {
+      "type": "string",
+      "description": "Job title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Job description"
+    },
+    "location": {
+      "type": "string",
+      "description": "Job site location"
+    },
+    "scheduled_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Scheduled date for the job"
+    },
+    "scheduled_time": {
+      "type": "string",
+      "description": "Scheduled time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "incomplete",
+        "in_progress",
+        "completed"
+      ],
+      "default": "incomplete",
+      "description": "Current job status"
+    },
+    "assigned_to": {
+      "type": "string",
+      "description": "Technician assigned"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "urgent"
+      ],
+      "default": "medium"
+    },
+    "equipment_type": {
+      "type": "string",
+      "description": "Type of equipment being serviced"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "scheduled_date",
+    "status"
+  ]
+}
